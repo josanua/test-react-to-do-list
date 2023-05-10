@@ -1,5 +1,5 @@
 import React from 'react'
-import TodoItem from "./TodoItem";
+import TodoItem from "./item/TodoItem";
 
 
 const todosData = [
@@ -21,7 +21,7 @@ const todosData = [
 ]
 const Home = () => {
     return (
-        <div className='bg-gray-900 h-screen text-white'>
+        <div className='bg-gray-900 h-screen text-white w-4/5 mx-auto'>
             {
                 todosData.map(todoItem => (
                     <TodoItem todoData={todoItem} key={todoItem.todoID} />

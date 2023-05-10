@@ -6,6 +6,8 @@ import Home from "./components/screens/Home/Home";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home />
+      <Layout>
+        <Home/>
+      <Layout/>
   </React.StrictMode>
 );
