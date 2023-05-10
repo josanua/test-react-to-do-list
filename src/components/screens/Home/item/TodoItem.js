@@ -1,9 +1,8 @@
-import {BsCheck} from "react-icons/bs";
-
+import Check from "./Check";
 const TodoItem = ({todoData}) => {
     return (
         <div>
-            <BsCheck/>
+            <Check/>
             {todoData.title}
         </div>
     )

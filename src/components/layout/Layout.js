@@ -1,5 +1,5 @@
 const Layout = ({children}) => {
-    return <div className="bg-gray-900 h-screen">
+    return <div className="py-10 bg-gray-900 h-screen">
         {children}
     </div>
 }
