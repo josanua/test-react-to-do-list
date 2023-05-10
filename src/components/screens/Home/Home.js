@@ -1,6 +1,5 @@
-import React from 'react'
+import React, {useState} from 'react'
 import TodoItem from "./item/TodoItem";
-
 
 const todosData = [
     {
@@ -20,9 +19,11 @@ const todosData = [
     }
 ]
 const Home = () => {
+    const [todos, setTodos] = useState(todosData);
+
     return (
         <div className='text-white w-4/5 mx-auto'>
-            <h1 className="text-2xl font-bold">My first to-do list</h1>
+            <h1 className="text-2xl font-bold text-center mb-3">My first to-do list</h1>
             {
                 todosData.map(todoItem => (
                     <TodoItem todoData={todoItem} key={todoItem.todoID} />
