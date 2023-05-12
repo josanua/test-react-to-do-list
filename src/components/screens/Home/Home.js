@@ -20,7 +20,6 @@ const todosData = [
 ]
 const Home = () => {
     const [todos, setTodos] = useState(todosData);
-
     const changeTodo = id => {
         const copy = [...todos]
         const current = copy.find(t => t.todoID === id)
@@ -28,10 +27,13 @@ const Home = () => {
         setTodos(copy)
     }
 
-    const removeTodo = id => setTodos([...todos].filter(t => t.todoID !== id))
+    const removeTodo = id => {
+        setTodos([...todos].filter(n => n.todoID !== id))
+    }
 
     return (
         <div className='text-white w-4/5 mx-auto'>
+            {console.log(todos)}
             <h1 className="text-2xl font-bold text-center mb-3">My first to-do list</h1>
             {
                 todosData.map(todoItem => (
