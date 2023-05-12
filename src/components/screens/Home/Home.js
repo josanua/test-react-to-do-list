@@ -9,7 +9,7 @@ const todosData = [
     },
     {
         title: 'Todo Title 2',
-        isCompleted: true,
+        isCompleted: false,
         todoID: '_todo2'
     },
     {
@@ -21,12 +21,19 @@ const todosData = [
 const Home = () => {
     const [todos, setTodos] = useState(todosData);
 
+    const changeTodo = id => {
+        const copy = [...todos]
+        const current = copy.find(t => t.todoID === id)
+        current.isCompleted = !current.isCompleted;
+        setTodos(copy)
+    }
+
     return (
         <div className='text-white w-4/5 mx-auto'>
             <h1 className="text-2xl font-bold text-center mb-3">My first to-do list</h1>
             {
                 todosData.map(todoItem => (
-                    <TodoItem todoData={todoItem} key={todoItem.todoID} />
+                    <TodoItem todoData={todoItem} key={todoItem.todoID} changeTodo = {changeTodo} />
                 ))
             }
         </div>
