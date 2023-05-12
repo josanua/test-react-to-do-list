@@ -13,7 +13,7 @@ const todosData = [
         todoID: '_todo2'
     },
     {
-        title: 'Todo Title 3 biggest to se what will happens' ,
+        title: 'Todo Title 3 biggest to se what will happens',
         isCompleted: false,
         todoID: '_todo3'
     }
@@ -28,12 +28,19 @@ const Home = () => {
         setTodos(copy)
     }
 
+    const removeTodo = id => setTodos([...todos].filter(t => t.todoID !== id))
+
     return (
         <div className='text-white w-4/5 mx-auto'>
             <h1 className="text-2xl font-bold text-center mb-3">My first to-do list</h1>
             {
                 todosData.map(todoItem => (
-                    <TodoItem todoData={todoItem} key={todoItem.todoID} changeTodo = {changeTodo} />
+                    <TodoItem
+                        key={todoItem.todoID}
+                        todoData={todoItem}
+                        changeTodo={changeTodo}
+                        removeTodo={removeTodo}
+                    />
                 ))
             }
         </div>
