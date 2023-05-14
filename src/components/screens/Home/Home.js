@@ -18,6 +18,8 @@ const todosData = [
         todoID: '_todo3'
     }
 ]
+
+// Home component
 const Home = () => {
     const [todos, setTodos] = useState(todosData);
     const changeTodo = id => {
@@ -33,10 +35,9 @@ const Home = () => {
 
     return (
         <div className='text-white w-4/5 mx-auto'>
-            {console.log(todos)}
             <h1 className="text-2xl font-bold text-center mb-3">My first to-do list</h1>
             {
-                todosData.map(todoItem => (
+                todos.map(todoItem => (
                     <TodoItem
                         key={todoItem.todoID}
                         todoData={todoItem}
