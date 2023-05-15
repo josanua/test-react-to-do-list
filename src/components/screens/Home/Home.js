@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import TodoItem from "./item/TodoItem";
+import todosData from "../../../todosData";
 
 // Home component
-const Home = ({todosData}) => {
+const Home = () => {
 
     const [todos, setTodos] = useState(todosData);
     const changeTodo = id => {
