@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import TodoItem from "./item/TodoItem";
+import CreateTodoField from "./create-todo-field/CreateTodoField";
 import data from "../../../data";
 
 // Home component
@@ -43,6 +44,7 @@ const Home = () => {
                     />
                 ))
             }
+            <CreateTodoField addTodo = {addTodo}/>
         </div>
     )
 }
