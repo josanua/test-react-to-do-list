@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import TodoItem from "./item/TodoItem";
-import todosData from "../../../todosData";
+import data from "../../../data";
 
 // Home component
 const Home = () => {
 
-    const [todos, setTodos] = useState(todosData);
+    const [todos, setTodos] = useState(data);
     const changeTodo = id => {
         const copy = [...todos]
         const current = copy.find(t => t.todoID === id)

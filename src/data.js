@@ -1,5 +1,5 @@
 // let data to be here
-const todosData = [
+const data = [
     {
         title: 'Todo Title',
         isCompleted: false,
@@ -16,4 +16,4 @@ const todosData = [
         todoID: '_todo3'
     }
 ]
-export default todosData;
+export default data;
