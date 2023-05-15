@@ -18,16 +18,6 @@ const Home = () => {
         setTodos([...todos].filter(n => n.todoID !== id))
     }
 
-    const addTodo = (title) => {
-        setTodos([
-            {
-                todoID: new Date(), // to lazy to create func for Id iteration, just created a random id
-                title,
-                isCompleted: false
-            },
-            ...todos])
-    }
-
     // For testing purposes
     // window.addTodo = addTodo;
 
@@ -44,7 +34,7 @@ const Home = () => {
                     />
                 ))
             }
-            <CreateTodoField addTodo = {addTodo}/>
+            <CreateTodoField setTodos = {setTodos}/>
         </div>
     )
 }

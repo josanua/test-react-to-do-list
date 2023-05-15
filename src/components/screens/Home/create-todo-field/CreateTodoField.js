@@ -1,7 +1,18 @@
 import {useState} from "react";
 
-const CreateTodoField = ({addTodo}) => {
+const CreateTodoField = ({setTodos}) => {
     const [title, setTitle] = useState('')
+
+    const addTodo = (title) => {
+        setTodos( prev => [
+            {
+                todoID: new Date(), // to lazy to create func for Id iteration, just created a random id
+                title,
+                isCompleted: false
+            },
+            ...prev])
+        setTitle('')
+    }
 
     return (
         <div className="flex items-center justify-between mb-4 rounded-2xl
