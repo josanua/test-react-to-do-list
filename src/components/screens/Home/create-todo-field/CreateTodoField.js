@@ -11,7 +11,7 @@ const CreateTodoField = ({addTodo}) => {
                 type="text"
                 onChange={e => setTitle(e.target.value)}
                 value={title}
-                onKeyPress={e => e.key === 'Enter' && addTodo(title)}
+                onKeyDown={e => e.key === 'Enter' && addTodo(title)}
             />
         </div>
     )
