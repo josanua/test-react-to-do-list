@@ -2,7 +2,7 @@
 const data = [
     {
         todoID: '_todo1',
-        title: 'Todo Title',
+        title: 'Todo Title Zina',
         isCompleted: false,
     },
     {
